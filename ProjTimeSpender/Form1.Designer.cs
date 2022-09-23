@@ -1,7 +1,7 @@
 ﻿
 namespace ProjTimeSpender
 {
-    partial class Form1
+    partial class frmMainStationDahe
     {
         /// <summary>
         /// Required designer variable.
@@ -30,72 +30,83 @@ namespace ProjTimeSpender
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.HideIconDahe = new System.Windows.Forms.NotifyIcon(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnStartWorkDahe = new System.Windows.Forms.Button();
+            this.niyShowIconDahe = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cmbChooseWorkDahe = new System.Windows.Forms.ComboBox();
+            this.txbCustomWorkDahe = new System.Windows.Forms.TextBox();
+            this.btnShowWorkDahe = new System.Windows.Forms.Button();
+            this.tmrScreenDiscoDahe = new System.Windows.Forms.Timer(this.components);
+            this.btnSettingsDahe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnStartWorkDahe
             // 
-            this.button1.Location = new System.Drawing.Point(12, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStartWorkDahe.Location = new System.Drawing.Point(12, 17);
+            this.btnStartWorkDahe.Name = "btnStartWorkDahe";
+            this.btnStartWorkDahe.Size = new System.Drawing.Size(94, 30);
+            this.btnStartWorkDahe.TabIndex = 0;
+            this.btnStartWorkDahe.Text = "Work";
+            this.btnStartWorkDahe.UseVisualStyleBackColor = true;
+            this.btnStartWorkDahe.Click += new System.EventHandler(this.btnStartWorkDahe_Click);
             // 
-            // HideIconDahe
+            // niyShowIconDahe
             // 
-            this.HideIconDahe.Text = "notifyIcon1";
-            this.HideIconDahe.Visible = true;
-            this.HideIconDahe.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.HideIconDahe_MouseDoubleClick);
+            this.niyShowIconDahe.Text = "showIcon";
+            this.niyShowIconDahe.Visible = true;
+            this.niyShowIconDahe.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.HideIconDahe_MouseDoubleClick);
             // 
-            // comboBox1
+            // cmbChooseWorkDahe
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cmbChooseWorkDahe.FormattingEnabled = true;
+            this.cmbChooseWorkDahe.Location = new System.Drawing.Point(12, 63);
+            this.cmbChooseWorkDahe.Name = "cmbChooseWorkDahe";
+            this.cmbChooseWorkDahe.Size = new System.Drawing.Size(195, 24);
+            this.cmbChooseWorkDahe.TabIndex = 1;
             // 
-            // textBox1
+            // txbCustomWorkDahe
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 2;
+            this.txbCustomWorkDahe.Location = new System.Drawing.Point(12, 104);
+            this.txbCustomWorkDahe.Name = "txbCustomWorkDahe";
+            this.txbCustomWorkDahe.Size = new System.Drawing.Size(195, 22);
+            this.txbCustomWorkDahe.TabIndex = 2;
             // 
-            // button2
+            // btnShowWorkDahe
             // 
-            this.button2.Location = new System.Drawing.Point(114, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "test";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnShowWorkDahe.Location = new System.Drawing.Point(114, 17);
+            this.btnShowWorkDahe.Name = "btnShowWorkDahe";
+            this.btnShowWorkDahe.Size = new System.Drawing.Size(93, 30);
+            this.btnShowWorkDahe.TabIndex = 4;
+            this.btnShowWorkDahe.Text = "show";
+            this.btnShowWorkDahe.UseVisualStyleBackColor = true;
             // 
-            // timer1
+            // tmrScreenDiscoDahe
             // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tmrScreenDiscoDahe.Enabled = true;
+            this.tmrScreenDiscoDahe.Interval = 1500;
+            this.tmrScreenDiscoDahe.Tick += new System.EventHandler(this.tmrScreenDiscoDahe_Tick);
             // 
-            // Form1
+            // btnSettingsDahe
+            // 
+            this.btnSettingsDahe.Location = new System.Drawing.Point(221, 17);
+            this.btnSettingsDahe.Name = "btnSettingsDahe";
+            this.btnSettingsDahe.Size = new System.Drawing.Size(93, 30);
+            this.btnSettingsDahe.TabIndex = 5;
+            this.btnSettingsDahe.Text = "settings";
+            this.btnSettingsDahe.UseVisualStyleBackColor = true;
+            // 
+            // frmMainStationDahe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 165);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.ClientSize = new System.Drawing.Size(326, 165);
+            this.Controls.Add(this.btnSettingsDahe);
+            this.Controls.Add(this.btnShowWorkDahe);
+            this.Controls.Add(this.txbCustomWorkDahe);
+            this.Controls.Add(this.cmbChooseWorkDahe);
+            this.Controls.Add(this.btnStartWorkDahe);
+            this.Name = "frmMainStationDahe";
+            this.Load += new System.EventHandler(this.frmMainStationDahe_Load);
+            this.Resize += new System.EventHandler(this.frmMainStationDahe_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,12 +114,13 @@ namespace ProjTimeSpender
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NotifyIcon HideIconDahe;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnStartWorkDahe;
+        private System.Windows.Forms.NotifyIcon niyShowIconDahe;
+        private System.Windows.Forms.ComboBox cmbChooseWorkDahe;
+        private System.Windows.Forms.TextBox txbCustomWorkDahe;
+        private System.Windows.Forms.Button btnShowWorkDahe;
+        private System.Windows.Forms.Timer tmrScreenDiscoDahe;
+        private System.Windows.Forms.Button btnSettingsDahe;
     }
 }
 

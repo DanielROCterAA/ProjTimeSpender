@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjTimeSpender
 {
-    public partial class Form1 : Form
+    public partial class frmMainStationDahe : Form
     {
-        bool tick = true;
-        public Form1()
+        int Time = 0;
+        List<Workaction> work = new List<Workaction>();
+        public frmMainStationDahe()
         {
             InitializeComponent();
             /*
@@ -21,53 +22,64 @@ namespace ProjTimeSpender
              * 
              *
             */
-            timer1.Start();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStartWorkDahe_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("button pressed");
+            Console.Write("button pressed");
 
+            Workaction NewWork = new Workaction(txbCustomWorkDahe.Text);
         }
 
         private void HideIconDahe_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ShowInTaskbar = true;
-            HideIconDahe.Visible = false;
+            niyShowIconDahe.Visible = false;
             WindowState = FormWindowState.Normal;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmMainStationDahe_Load(object sender, EventArgs e)
         {
-           
-            HideIconDahe.BalloonTipText = "app min";
-            HideIconDahe.BalloonTipTitle = "test app";
+            tmrScreenDiscoDahe.Start();
+            niyShowIconDahe.BalloonTipText = "app min";
+            niyShowIconDahe.BalloonTipTitle = "test app";
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
+        private void frmMainStationDahe_Resize(object sender, EventArgs e)
         {
             if(WindowState == FormWindowState.Minimized)
             {
                 ShowIcon = false;
-                HideIconDahe.Visible = true;
-                HideIconDahe.ShowBalloonTip(1000);
+                niyShowIconDahe.Visible = true;
+                niyShowIconDahe.ShowBalloonTip(1000);
             }
         }
         
-        private void timer1_Tick(object sender, EventArgs e)
+        private void tmrScreenDiscoDahe_Tick(object sender, EventArgs e)
         {
-            BackColor = Color.White;
-            tick = false;
-            if (tick == false)
+            if (Time % 2 == 0)
             {
-                Console.WriteLine("test");
                 BackColor = Color.Red;
-                tick = true;
+                Time++;
+            }
+            else
+            {
+                BackColor = Color.White;
+                Time++;
             }
         }
-        void colorChange()
+        class Workaction
         {
+            public String Workname;
+
+            public Workaction(String name)
+            {
+                Workname = name;
+            }
 
         }
+
+        
     }
 }
